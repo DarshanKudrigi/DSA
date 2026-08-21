@@ -8,8 +8,8 @@
 
 // IntroSort : it is a hybrid sorting algorithm that combines quicksort, heapsort, and insertion sort. It is used in the C++ standard library's sort function to provide efficient sorting performance across different types of input data. The algorithm starts with quicksort and switches to heapsort when the recursion depth exceeds a certain level, ensuring that the worst-case time complexity remains O(n log n). For small subarrays, it uses insertion sort for better performance.
 
-
-// probelm statement: Given a vector of strings, find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
+// problem number: 14
+// problem statement: Given a vector of strings, find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string "".
 
 // Example 1:
 // Input: strs = ["flower","flow","flight"]
@@ -52,7 +52,26 @@ public:
     }
 };
 
+// optimal approach: vertical scanning
+
+// The vertical scanning approach involves comparing characters of the strings at the same index across all strings. We start from the first character and move downwards, checking if all strings have the same character at that index. If we find a mismatch or reach the end of any string, we stop and return the common prefix found so far. This method has a time complexity of O(n * m), where n is the number of strings and m is the length of the shortest string, and it uses O(1) additional space.
 
 
-
-
+// code for vertical scanning approach
+class Solution {
+public:
+    string longestCommonPrefix(vector<string>& strs) {
+        if (strs.empty()) return "";
+        
+        for (int i = 0; i < strs[0].length(); i++) {
+            char c = strs[0][i];
+            for (int j = 1; j < strs.size(); j++) {
+                if (i >= strs[j].length() || strs[j][i] != c) {
+                    return strs[0].substr(0, i);
+                }
+            }
+        }
+        
+        return strs[0];
+    }
+};
