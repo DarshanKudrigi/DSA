@@ -7,8 +7,10 @@
 // example: s1 = "egg", s2 = "add" => true, s1 = "foo", s2 = "bar" => false, s1 = "paper", s2 = "title" => true
 // example: s1 = "ab", s2 = "aa" => false, s1 = "abc", s2 = "def" => true
 
+// example: s1 = "abca", s2 = "zbxz" => true, s1 = "abca", s2 = "zbxy" => false
 
 
+// approach : the idea is to use two unordered maps to store the last occurrence of each character in both strings and compare their positions. If the positions of the characters in both strings are not the same, then the strings are not isomorphic.
 
 
 
