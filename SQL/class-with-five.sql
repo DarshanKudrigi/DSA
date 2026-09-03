@@ -37,6 +37,37 @@ Output:
 | Math    |
 +---------+
 
+// example 2:
+Input:
++------------+---------+
+| student    | class   |
++------------+---------+
+| Alice      | Math    |
+| Bob        | Math    |
+| Charlie    | Math    |
+| David      | Math    |
+| Eve        | Math    |
+| Frank      | Science |
+| Grace      | Science |
+| Henry      | Science |
+| Irene      | Science |
+| Jack       | Science |
+| Karen      | Science |
+| Liam       | Science |
+| Mia        | Science |
+| Noah       | Science |
+| Olivia     | Science |
++------------+---------+
+
+Output:
++---------+
+| class   |
++---------+
+| Math    |
+| Science |
++---------+
+
+// Write your MySQL query statement below
 
 
 
