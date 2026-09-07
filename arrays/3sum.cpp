@@ -51,3 +51,29 @@ Important Notes for 3-Sum Brute Force:
 9. Better optimal solution:
    Sorting + Two Pointer = O(n^2)
 */
+
+
+
+
+class Solution {
+public:
+    vector<vector<int>> threeSum(vector<int>& arr) {
+        int n = arr.size();
+        set<vector<int>> ans;
+        for(int i=0;i<n;i++){
+            for(int j=i+1;j<n;j++){
+                for(int k=j+1;k<n;k++){
+                        if(arr[i]+arr[j]+arr[k] == 0 ){
+                            if((i != j && i != k) && (j != k)){
+                            vector<int> triplet = {arr[i], arr[j], arr[k]};
+                            sort(triplet.begin(), triplet.end()); // <--- Add this line
+                            ans.insert(triplet);
+                            }
+                        }   
+                }
+            }
+       } 
+       vector<vector<int>> final(ans.begin(), ans.end());
+       return final;
+    }
+}; 
