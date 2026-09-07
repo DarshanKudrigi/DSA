@@ -54,6 +54,15 @@ Important Notes for 3-Sum Brute Force:
 
 
 
+// Another implementation of 3-Sum using brute force approach
+// Time Complexity: O(n^3)
+// Space Complexity: O(k)   // k = number of unique triplets
+// This implementation uses a set to store unique triplets and sorts each triplet before insertion.
+// This ensures that duplicates are avoided and the final result contains only unique triplets.
+// Note: This implementation is for educational purposes and may not be efficient for large inputs.
+// it is recommended to use the optimal solution (Sorting + Two Pointer) for better performance in practice.
+
+
 
 class Solution {
 public:
