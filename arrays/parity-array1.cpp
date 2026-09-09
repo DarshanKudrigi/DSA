@@ -21,3 +21,30 @@ class Solution {
         return true;
     }
 }
+
+
+class Solution {
+public:
+    vector<int> sortArrayByParity(vector<int>& arr) {
+        int n = arr.size();
+        int l=0;
+        int r = n-1;
+        if(n==1){
+            return arr;
+        }
+        while(l<r){
+            if (arr[l] % 2 == 1 && arr[r] % 2 == 0){
+                swap(arr[r],arr[l]);
+                l++;
+                r--;
+            }
+            if (arr[l] % 2 == 0) {
+                l++;
+            }
+            if (arr[r] % 2 == 1) {
+                r--;
+            }
+        }
+    return arr;
+    }
+};
