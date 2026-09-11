@@ -12,6 +12,18 @@
 // - [5,4,2] with sum 11
 // - [4,2,9] with sum 15
 
+// Example 2:
+// Input: nums = [4,4,4], k = 3
+// Output: 0
+// Explanation: There are no distinct subarrays of size 3.
+
+
+
+// Constraints:
+// 1 <= k <= nums.length <= 10^5
+
+
+
 class Solution {
 public:
     long long maximumSubarraySum(vector<int>& nums, int k) {
