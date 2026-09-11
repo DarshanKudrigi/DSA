@@ -49,3 +49,59 @@ public:
         return ans;
     }
 };
+
+
+
+
+// Time Complexity: O(n*k) where n is the size of the input array and k is the length of the subarray. In the worst case, we may have to check all possible subarrays of length k, which takes O(n*k) time.
+
+// Space Complexity: O(k) where k is the length of the subarray. We use an unordered_set to store the elements of the current subarray, which takes O(k) space in the worst case.
+
+
+
+
+
+
+
+// approach 2: Sliding Window + HashSet
+// In this approach, we use a sliding window of size k and a hash set to keep track of the distinct elements in the current window. We maintain a running sum of the elements in the window and update the maximum sum whenever we find a valid distinct subarray of size k. If we encounter a duplicate element, we slide the left end of the window to remove elements until the duplicate is removed.
+ 
+
+// Time Complexity: O(n) where n is the size of the input array. We iterate through the array once, and each element is added and removed from the hash set at most once.
+
+
+// Space Complexity: O(k) where k is the length of the subarray. We use an unordered_set to store the elements of the current window, which takes O(k) space in the worst case.
+
+
+
+class Solution {
+public:
+    long long maximumSubarraySum(vector<int>& nums, int k) {
+        unordered_set<int> st;
+        
+        long long sum = 0;
+        long long ans = 0;
+        int l = 0;
+
+        for (int r = 0; r < nums.size(); r++) {
+            while (st.count(nums[r])) {
+                st.erase(nums[l]);
+                sum -= nums[l];
+                l++;
+            }
+
+            st.insert(nums[r]);
+            sum += nums[r];
+
+            if (r - l + 1 == k) {
+                ans = max(ans, sum);
+
+                st.erase(nums[l]);
+                sum -= nums[l];
+                l++;
+            }
+        }
+
+        return ans;
+    }
+};
