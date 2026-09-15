@@ -78,3 +78,10 @@ SELECT class
 FROM Courses
 GROUP BY class
 HAVING COUNT(student) >= 5;
+
+
+game Play Analysis One
+
+select player_id,min(event_date) as first_login
+from Activity
+group by player_id
