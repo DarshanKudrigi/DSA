@@ -16,9 +16,6 @@
 // nums.length == 2 * n
 
 
-
-
-
 class Solution {
 public:
     vector<int> sortArrayByParityII(vector<int>& nums) {
