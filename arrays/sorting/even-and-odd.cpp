@@ -22,6 +22,8 @@
 // Input: nums = [2,1]
 // Output: [2,1]
 //
+// Constraints:
+// 1 <= nums.length <= 100  
 
 
 
