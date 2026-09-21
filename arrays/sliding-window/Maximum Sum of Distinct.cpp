@@ -109,7 +109,12 @@ public:
 
 
 
-// 
+// approach 3: Sliding Window + HashMap
+// In this approach, we use a sliding window of size k and a hash map to keep track of the frequency of elements in the current window. We maintain a running sum of the elements in the window and update the maximum sum whenever we find a valid distinct subarray of size k. If we encounter a duplicate element, we slide the left end of the window to remove elements until the duplicate is removed.
+
+
+
+// Time Complexity: O(n) where n is the size of the input array. We iterate through the array once, and each element is added and removed from the hash map at most once.
 
 
 
