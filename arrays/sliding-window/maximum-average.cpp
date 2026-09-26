@@ -2,6 +2,8 @@
 
 // Find the maximum average of a subarray of size k
 
+// Question Link: https://leetcode.com/problems/maximum-average-subarray-i/
+
 // Approach 1: Brute Force
 // In this approach, we iterate through the array and for each subarray of size k, we calculate the sum and keep track of the maximum sum found. Finally, we return the maximum sum divided by k to get the maximum average.
 
