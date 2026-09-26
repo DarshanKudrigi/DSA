@@ -59,3 +59,29 @@ public:
         return max_sum / k; 
     }
 };
+
+// acumulate function is used to calculate the sum of the first k elements in a more efficient way.
+
+//auumulate function which is defined in the <numeric> header file, takes three arguments: the starting iterator, the ending iterator, and an initial value. It calculates the sum of the elements in the range [first, last) and returns the result. In this case, we use it to calculate the sum of the first k elements of the nums vector.
+
+
+// Approach 3: Optimized Sliding Window
+
+// In this approach, we use a sliding window of size k to calculate the sum of the subarray. We first calculate the sum of the first k elements and then slide the window by removing the first element and adding the next element in the array. We keep track of the maximum sum found during this process. Finally, we return the maximum sum divided by k to get the maximum average.
+
+
+class Solution {
+public:
+    double findMaxAverage(std::vector<int>& nums, int k) {
+        int n = nums.size();
+        double current_sum = std::accumulate(nums.begin(), nums.begin() + k, 0.0); // Calculate the sum of the first k elements
+        double max_sum = current_sum; // Initialize max_sum with the sum of the first k elements
+        
+        for (int i = k; i < n; i++) {
+            current_sum += nums[i] - nums[i - k]; // Slide the window by adding the next element and removing the first element of the previous window
+            max_sum = std::max(max_sum, current_sum); // Update max_sum if current_sum is greater
+        }
+        
+        return max_sum / k; // Return the maximum average
+    }
+};
