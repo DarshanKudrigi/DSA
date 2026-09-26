@@ -69,6 +69,8 @@ public:
 
 // In this approach, we use a sliding window of size k to calculate the sum of the subarray. We first calculate the sum of the first k elements and then slide the window by removing the first element and adding the next element in the array. We keep track of the maximum sum found during this process. Finally, we return the maximum sum divided by k to get the maximum average.
 
+//Time complexity for the accumulate function is O(k) where k is the size of the subarray. The overall time complexity of this approach is O(n) where n is the size of the input array.
+
 
 class Solution {
 public:
@@ -83,5 +85,38 @@ public:
         }
         
         return max_sum / k; // Return the maximum average
+    }
+};
+
+
+
+
+
+
+
+class Solution {
+public:
+    double findMaxAverage(vector<int>& nums, int k) {
+        int n = nums.size();
+        double current_sum = 0;
+        
+        
+        for (int i = 0; i < k; i++) {
+            current_sum += nums[i];
+        }
+        
+        double max_sum = current_sum;
+        int l = 0;
+        int r = k;
+        
+        while(r<n){
+            current_sum += nums[r];
+            current_sum -= nums[l];
+            max_sum = std::max(max_sum, current_sum); 
+            r++;
+            l++;
+        }
+        
+        return max_sum / k;
     }
 };
