@@ -16,6 +16,10 @@
 
 
 
+// time complexity: O(n + m), where n is the length of s1 and m is the length of s2.
+
+// space complexity: O(1), as we are using a fixed size array of 26 to store the frequency counts of characters.
+
 
 
 
