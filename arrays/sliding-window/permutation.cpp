@@ -1,4 +1,21 @@
-//
+// permutation in String
+
+// Given two strings s1 and s2, write a function to return true if s2 contains the permutation of s1. In other words, one of the first string's permutations is the substring of the second string.
+
+// Question Link: https://leetcode.com/problems/permutation-in-string/
+
+
+
+// Approach 1: Brute Force
+
+// In this approach, we generate all the permutations of s1 and check if any of them is a substring of s2. If we find a match, we return true. If we finish checking all permutations and find no match, we return false. This approach has a time complexity of O(n! * m), where n is the length of s1 and m is the length of s2.
+
+
+// Approach 2: Sliding Window
+// In this approach, we use a sliding window of size equal to the length of s1 to check if any substring of s2 is a permutation of s1. We maintain a frequency count of characters in s1 and the current window in s2. If the frequency counts match, we return true. If we finish checking all windows and find no match, we return false. This approach has a time complexity of O(m), where m is the length of s2.
+
+
+
 
 
 
