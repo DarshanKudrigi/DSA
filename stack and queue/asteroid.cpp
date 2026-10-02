@@ -1,3 +1,11 @@
+// Problem: Asteroid Collision
+
+// Difficulty: Medium
+
+// Solution: The problem can be solved using a stack data structure. We will iterate through the list of asteroids and use the stack to keep track of the asteroids that are still in motion. When we encounter a left-moving asteroid, we will check the top of the stack to see if there is a right-moving asteroid that it can collide with. If there is, we will compare their sizes and determine which one will survive. If the left-moving asteroid is larger, it will destroy the right-moving asteroid and continue moving. If they are the same size, both will be destroyed. If the right-moving asteroid is larger, it will remain in the stack and the left-moving asteroid will be destroyed. We will continue this process until we have processed all asteroids.
+
+
+// C++ language standard version: This project uses the C++17 language standard version.
 
 
 
