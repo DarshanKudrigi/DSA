@@ -68,10 +68,9 @@ Output:
 +---------+
 
 // Write your MySQL query statement below
+// The query selects the class from the Courses table, groups the results by class, and filters the groups to only include those with a count of students greater than or equal to 5.
 
-
-
-
+// The final query is as follows:
 
 
 SELECT class
