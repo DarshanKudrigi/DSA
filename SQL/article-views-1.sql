@@ -34,7 +34,7 @@ Output:
 | 2  |
 +----+
 
-
+// Sql question updated
 
 # Write your MySQL query statement below
 
