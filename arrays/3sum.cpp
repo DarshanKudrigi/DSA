@@ -1,7 +1,9 @@
 //appoch used for 3-sum problem is brute force approach
 // Time Complexity: O(n^3)
+
 // Space Complexity: O(k)   // k = number of unique triplets
 
+// Approch using the 3 for loops to generate all possible triplets
 
 class Solution {
 public:
