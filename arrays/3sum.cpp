@@ -3,7 +3,7 @@
 
 // Space Complexity: O(k)   // k = number of unique triplets
 
-// Approch using the 3 for loops to generate all possible triplets
+// Approch using the 3 for loops to generate all possible triplets  and check if their sum is zero.
 
 class Solution {
 public:
