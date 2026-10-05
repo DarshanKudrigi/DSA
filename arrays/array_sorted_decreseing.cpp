@@ -1,6 +1,11 @@
 //#include<bits/stdc++.h>
 //using namespace std;
 
+// question number for the leetcode
+// 977. Squares of a Sorted Array
+
+// Given an integer array nums sorted in non-decreasing order, return an array of the squares of each number sorted in non-decreasing order.
+
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
