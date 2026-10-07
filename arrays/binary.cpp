@@ -5,6 +5,7 @@
 // space complexity of binary search is O(1) as we are using only a constant amount of space for variables like low, high, and mid.
 
 // code:
+// Algorithm 
 
 #include <iostream>
 using namespace std;
