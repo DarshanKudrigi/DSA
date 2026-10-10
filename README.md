@@ -6,4 +6,4 @@ and Solves Daily
 ✅ Daily coding
 ✅ Better problem solving
 ✅ Stronger fundamentals
-✅ Continuous growth
+✅ Continuous growth and Consistency 
