@@ -1,3 +1,7 @@
+
+// Linked list Node and the Data Storing the Nxt pointer as Null
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
