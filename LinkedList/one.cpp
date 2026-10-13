@@ -31,8 +31,6 @@ int main()
     // Create first node
     Node *y = new Node(arr[0]);
 
-    // Print memory location of node
-    cout << y << '\n';
 
     // Print data stored in node
     cout << y->data << '\n';
