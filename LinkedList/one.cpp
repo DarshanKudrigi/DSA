@@ -1,3 +1,7 @@
+
+// Linked list Node and the Data Storing the Nxt pointer as Null
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -31,8 +35,6 @@ int main()
     // Create first node
     Node *y = new Node(arr[0]);
 
-    // Print memory location of node
-    cout << y << '\n';
 
     // Print data stored in node
     cout << y->data << '\n';
