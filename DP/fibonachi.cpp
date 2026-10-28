@@ -1,6 +1,6 @@
 // this is a C++ program to generate the Fibonacci series using dynamic programming (memoization) approach. The program defines a recursive function `fib` that calculates the Fibonacci number for a given index `n`, while storing previously computed values in a vector `dp` to avoid redundant calculations. The main function prompts the user for input and prints the Fibonacci series up to the specified number of terms.
 
-// 
+// by using the memoization technique, the time complexity of the Fibonacci calculation is reduced from exponential O(2^n) to linear O(n), making it efficient for larger values of `n`. The program also handles edge cases where the input is less than or equal to zero by returning early without performing any calculations.
 
 
 
