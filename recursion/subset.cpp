@@ -31,3 +31,34 @@ public:
         return res;
     }
 };
+
+
+
+
+
+// by using reference variable to avoid copying the vector in each recursive call
+
+class Solution {
+public:
+    void subsetFun(int index, vector<int>& nums, vector<int>& temp, vector<vector<int>>& res) {
+        if (index >= nums.size()) {
+            res.push_back(temp);
+            return;
+        }
+
+        temp.push_back(nums[index]);
+        subsetFun(index + 1, nums, temp, res);
+
+        temp.pop_back();
+        subsetFun(index + 1, nums, temp, res);
+    }
+
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> res;
+        vector<int> temp;
+
+        subsetFun(0, nums, temp, res);
+
+        return res;
+    }
+};
